@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Automating Invoice Processing with GPT-4o
 
 This repository contains the code for an automated invoice processing system using Python, OpenAI's GPT-4o and Pandas. The system can process multiple PDF invoices, extract relevant information, perform basic financial analysis, and generate an Excel report.
@@ -45,3 +46,7 @@ To run the invoice processing application:
 ```bash
 poetry run process-invoices
 ```
+=======
+# SmartInvoice-AI---Automating-Invoice-Processing-with-GPT-4o
+SmartInvoice AI - Automating Invoice Processing with GPT-4o
+>>>>>>> 7e2e477a520f1b948dbb58435c23adde347fee10
