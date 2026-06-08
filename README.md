@@ -1,52 +1,132 @@
-<<<<<<< HEAD
-# Automating Invoice Processing with GPT-4o
+# SmartInvoice AI – Automating Invoice Processing with GPT-4o
 
-This repository contains the code for an automated invoice processing system using Python, OpenAI's GPT-4o and Pandas. The system can process multiple PDF invoices, extract relevant information, perform basic financial analysis, and generate an Excel report.
+## Overview
 
-For a detailed explanation of the code and concepts, check out [this blog post](https://codeawake.com/blog/invoice-processing).
+SmartInvoice AI is an intelligent invoice processing system that automates the extraction, analysis, and reporting of financial data from PDF invoices using GPT-4o, Python, and Pandas.
 
-## Structure
+The application processes multiple invoices, extracts key information such as vendor details, invoice numbers, dates, and amounts, performs basic financial analysis, and generates structured reports for business decision-making.
 
-The code is organized into the following files:
+## Features
 
-- `main.py`: The main script for the invoice processing pipeline.
-- `extraction.py`: Extracts the data from PDF invoices using GPT-4o.
-- `processing.py`: Validates the invoice data, performs the financial analysis and creates the Excel report.
-- `config.py`: Configuration settings for the application.
-- `prompt.py`: Defines the system prompt used for GPT-4o.
+* Automated PDF invoice processing
+* AI-powered data extraction using GPT-4o
+* Invoice classification and validation
+* Revenue and expense tracking
+* Financial summary generation
+* Excel report generation
+* Batch processing of multiple invoices
+* Structured data export for further analysis
+
+## Tech Stack
+
+* Python
+* GPT-4o API
+* Pandas
+* OpenPyXL
+* Poetry
+* PDF Processing Libraries
+
+## Project Structure
+
+```text
+SmartInvoice-AI/
+│
+├── main.py
+├── extraction.py
+├── processing.py
+├── config.py
+├── prompt.py
+│
+├── data/
+│   └── invoices/
+│
+├── reports/
+│
+├── pyproject.toml
+└── README.md
+```
+
+### File Description
+
+**main.py**
+
+* Entry point of the application.
+* Coordinates invoice extraction, processing, and report generation.
+
+**extraction.py**
+
+* Uses GPT-4o to extract structured information from PDF invoices.
+
+**processing.py**
+
+* Validates invoice data.
+* Performs financial analysis.
+* Generates Excel reports.
+
+**config.py**
+
+* Stores application configuration settings.
+
+**prompt.py**
+
+* Contains prompts used for GPT-4o invoice understanding and extraction.
 
 ## Installation
 
-### Prerequisites ✅
+### Prerequisites
 
-- Python 3.11 or higher
-- Poetry (Python package manager)
+* Python 3.11+
+* Poetry
+* OpenAI API Key
 
-### Instructions
+### Install Dependencies
 
-1. Install the dependencies using Poetry:
+```bash
+poetry install
+```
 
-    ```bash
-    poetry install
-    ```
+### Configure Environment Variables
 
-2. Create a `.env` file by copying the provided `.env.example` file and set the required environment variable:
-    - `OPENAI_API_KEY`: Your OpenAI API key.
+Create a `.env` file:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
 
 ## Running the Application
 
-Before running the application:
+Place invoice PDFs inside:
 
-1. Update the `COMPANY_NAME` in `app/config.py` to match your company's name. This is used for invoice type classification (incoming or outgoing).
+```text
+data/invoices/
+```
 
-2. Ensure your PDF invoices are placed in the directory specified by `INVOICES_DIR` in `app/config.py` (default is `data/invoices`).
-
-To run the invoice processing application:
+Run the application:
 
 ```bash
 poetry run process-invoices
 ```
-=======
-# SmartInvoice-AI---Automating-Invoice-Processing-with-GPT-4o
-SmartInvoice AI - Automating Invoice Processing with GPT-4o
->>>>>>> 7e2e477a520f1b948dbb58435c23adde347fee10
+
+## Example Workflow
+
+1. Upload PDF invoices.
+2. GPT-4o extracts invoice information.
+3. Invoice data is validated and structured.
+4. Financial metrics are calculated.
+5. Excel reports are automatically generated.
+
+## Future Enhancements
+
+* Financial dashboard using Power BI
+* AI-generated financial narratives
+* Expense categorization
+* Invoice fraud detection
+* Monthly financial report generation
+* Predictive cash-flow analysis
+
+## Author
+
+Anmol Kankarwal
+
+B.Tech CSE (AI)
+Galgotias University
